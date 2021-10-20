@@ -1,0 +1,88 @@
+
+
+html,
+body
+{
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-size: 12;
+    font-family: 'JetBrains Mono', monospace; 
+    text-decoration: none;
+    overflow: hidden;
+}
+
+body {
+    background-color: #000000;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+}
+
+canvas {
+
+    z-index: -1;
+
+}
+
+canvas:focus { 
+    outline: none; 
+}
+
+*
+{
+    
+    margin: 0;
+    padding: 0;   
+}
+
+a
+{
+    color: #ffffff;
+    text-decoration: none
+}
+
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+
+.loading-bar 
+{
+    color: #000000;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 1px;
+    background: rgb(169, 223, 98);
+    transform: scaleX(0);
+    transform-origin: top left;
+    transition: transform 0.5s;
+    will-change: transform;
+    z-index: 100;
+    margin-left: -20px;
+}
+
+.loading-bar.ended
+{
+    opacity: 0;
+    transform-origin: top right;
+    transition: transform 1.5s ease-in-out;
+
+}
+
+.contact 
+{
+    align-self: center;
+    width: 100vw;
+    height: max-content;
+    top: 10vh;
+  
+}
