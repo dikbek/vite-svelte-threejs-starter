@@ -1,6 +1,14 @@
-I managed to get two scenes to work in svelte, but the testScene has some complications (it uses more than just a cube)
-BasicScene.svelte is a basic red cube. The only error it gives is related to the canvas element, but doesn't stop it from working.
-TestScene.svelte has a few more errors in the script, relating to 'radius' and buffer geometry arguments, but also weirdly doesn't break it.
+This is a basic setup for a typescript threejs showcase using Vite, Svelte, Svelte navigator. 
+
+Current issues:
+
+glsl loader is not working - see portal.svelte
+dat.gui is buggy as hell. Won't leave the viewport when changing scenes.
+
+
+Acknowledgements: Bruno Simon ThreeJS Journey (https//www.threejs-journey.com) - this is the portal made in his class.
+
+
 
 # Svelte + Vite
 
