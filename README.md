@@ -2,8 +2,8 @@ This is a basic setup for a typescript threejs showcase using Vite, Svelte, Svel
 
 Current issues:
 
-glsl loader is not working - see portal.svelte
-dat.gui is buggy as hell. Won't leave the viewport when changing scenes.
+glsl loader plugin is not working (see portal.svelte)<br>
+dat.gui is buggy as hell. Won't leave the viewport when changing scenes, and sometimes replicates.
 
 
 Acknowledgements: Bruno Simon ThreeJS Journey (https//www.threejs-journey.com) - this is the portal made in his class.
