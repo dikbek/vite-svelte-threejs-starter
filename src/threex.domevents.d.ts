@@ -1,3 +1,5 @@
+// Created by @ahilbig
+
 import {Camera, Object3D} from 'three';
 
 export class DomEvents {
