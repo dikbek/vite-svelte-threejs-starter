@@ -37,22 +37,9 @@
     transition:slide={{ duration: 750, delay: 100, easing: cubicInOut }}
   >
     <div class="logo" href="/">
-      <a href="/" class="letter let1">I</a>
-      <a href="/" class="letter let2">L</a>
-      <a href="/" class="letter let3">L</a>
-      <a href="/" class="letter let4">U</a>
-      <a href="/" class="letter let5">S</a>
-      <a href="/" class="letter let6">T</a>
-      <a href="/" class="letter let7">R</a>
-      <a href="/" class="letter let8">A</a>
-      <a href="/" class="letter let9">T</a>
-      <a href="/" class="letter let10">I</a>
-      <a href="/" class="letter let11">V</a>
-      <a href="/" class="letter let12">E</a>
-      <a href="/" class="letter dev">.</a>
-      <a href="/" class="letter dev">D</a>
-      <a href="/" class="letter dev">E</a>
-      <a href="/" class="letter dev">V</a>
+      <a href="/" class="letter let1">THREEJS</a>
+      <a href="/" class="letter dev">SHOWCASE</a>
+   
     </div>
 
     <div class="nav">
@@ -289,71 +276,12 @@
     animation: spin1 1s cubic-bezier(0,.51,.17,1) 0.25s 1 ;
     
 }
-.let2 {
-    animation: spin2 1.25s cubic-bezier(0,.51,.17,1) 0.25s 1 ;
-    
-}
 
-.let3 {
-    animation: spin3 1.5s cubic-bezier(0,.51,.17,1) 0.25s 1 ;
-    
-}
-.let4 {
-    animation: spin4 1.75s cubic-bezier(0,.51,.17,1) 0.25s 1 ;
-}
-.let5 {
-    animation: spin5 2s cubic-bezier(0,.51,.17,1) 0.25s 1 ;   
-}
-.let6 {
-    animation: spin6 2.25s cubic-bezier(0,.51,.17,1) 0.25s 1 ;
-}
-.let7 {
-    animation: spin6 2.5s cubic-bezier(0,.51,.17,1) 0.25s 1 ;
-}
-.let8 {
-    animation: spin6 2.75s cubic-bezier(0,.51,.17,1) 0.25s 1 ;
-}
-.let9 {
-    animation: spin6 3s cubic-bezier(0,.51,.17,1) 0.25s 1 ;
-}
-.let10 {
-    animation: spin6 3.25s cubic-bezier(0,.51,.17,1) 0.25s 1 ;
-}
-.let11 {
-    animation: spin6 3.5s cubic-bezier(0,.51,.17,1) 0.25s 1 ;
-}
-.let12 {
-    animation: spin6 3.75s cubic-bezier(0,.51,.17,1) 0.25s 1 ;
-}
 @keyframes spin1 {
     100% {
       transform: rotateY(360deg);
     }
   }
 
-  @keyframes spin2 {
-    100% {
-      transform: rotateY(720deg);
-    }
-  }
-  @keyframes spin3 {
-    100% {
-      transform: rotateY(1080deg);
-    }
-  }
-  @keyframes spin4 {
-    100% {
-      transform: rotateY(1440deg);
-    }
-  }
-  @keyframes spin5 {
-    100% {
-      transform: rotateY(1800deg);
-    }
-  }
-  @keyframes spin6 {
-    100% {
-      transform: rotateY(2520deg);
-    }
-  }
+  
 </style>
