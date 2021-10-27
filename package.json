@@ -20,6 +20,7 @@
     "@here/harp.gl": "^0.27.1",
     "@types/dat.gui": "^0.7.7",
     "@types/greensock": "^1.15.32",
+    "@types/threex.domevents": "git+https://github.com/ahilbig/types-threex.domevents.git",
     "check-node-version": "^4.1.0",
     "dat.gui": "^0.7.7",
     "gsap": "^3.8.0",
