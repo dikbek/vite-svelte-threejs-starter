@@ -113,6 +113,14 @@ import { circOut, linear, sineInOut, sineOut, quadInOut, quadOut, quartOut, quin
       // Controls
       const controls = new OrbitControls(camera, renderer.domElement )
     controls.enableDamping = true
+
+    //Dom events
+
+    var domEvents	= new THREEx.DomEvents(camera, renderer.domElement)
+
+    domEvents.addEventListener(ico, 'click', function(event){
+    console.log('you clicked on the mesh')
+}, false)
     
     /**
      * Animate
