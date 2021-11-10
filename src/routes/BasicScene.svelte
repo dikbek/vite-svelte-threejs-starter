@@ -16,7 +16,7 @@
   import * as DomEvents from "threex-domevents";
   var THREEx = {};
   DomEvents(THREE, THREEx);
-  console.log(DomEvents, OrbitControls);
+  console.log(DomEvents, OrbitControls)
 
   setTimeout(() => {
     /**
@@ -137,7 +137,27 @@
         console.log("you clicked on the mesh");
       },
       false
-    );
+    )
+    
+    domEvents.addEventListener(
+      ico,
+      "mouseover",
+      function (event) {
+        console.log("you rolled over the mesh")
+        canvas.classList.add('rollover')
+      },
+      false
+    )
+
+    domEvents.addEventListener(
+      ico,
+      "mouseout",
+      function (event) {
+        console.log("you rolled off the mesh")
+        canvas.classList.remove('rollover')
+      },
+      false
+    )
 
     /**
      * Animate

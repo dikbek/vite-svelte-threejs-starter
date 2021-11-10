@@ -2,7 +2,7 @@
   import "../global.css";
   import * as THREE from "three";
   import { AdditiveBlending, TextureLoader } from "three";
-  import * as dat from "dat.gui";
+  //import * as dat from "dat.gui";
   import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
   import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
   import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
@@ -39,7 +39,7 @@
      * Base
      */
     // Debug
-    const gui = new dat.GUI();
+    //const gui = new dat.GUI();
 
     // Canvas
     const canvas = document.querySelector("canvas.webgl");

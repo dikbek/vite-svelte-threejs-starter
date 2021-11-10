@@ -11,22 +11,6 @@
 
   let visible = false;
 
-  function spin(node, { duration }) {
-    return {
-      duration,
-      css: (t) => {
-        const eased = elasticOut(t);
-
-        return `
-					transform: scale(${eased}) rotate(${eased * 1080}deg);
-					color: hsl(
-						${~~(t * 360)},
-						${Math.min(100, 1000 - 1000 * t)}%,
-						${Math.min(50, 500 - 500 * t)}%
-					);`;
-      },
-    };
-  }
 
 
 </script>
@@ -45,7 +29,15 @@
     <div class="nav">
       <Router primary={false}>
         {#each Routes as route}
-          <a on:click={() => navigate(route.routeUrl)} href={route.routeUrl}>
+          <a on:click={
+            () => 
+            {
+              navigate(route.routeUrl), 
+              visible=false
+            } 
+            } 
+            href={route.routeUrl}
+            >
             <Link to={route.routeUrl}>
               {route.routeName}
             </Link><br />
@@ -95,7 +87,6 @@
     border-top: solid 2px #ffffff60;
     margin-top: 10px;
 
-
   }
 
   .icon {
@@ -138,6 +129,8 @@
     color: #ffffff;
     text-decoration: none;
   }
+
+
 
   .wrapper :global(.nav) {
     color: #ffffff;

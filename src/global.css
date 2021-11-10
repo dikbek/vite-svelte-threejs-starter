@@ -53,6 +53,10 @@ a
     outline: none;
 }
 
+.webgl.rollover 
+{
+    cursor: pointer;
+}
 
 .loading-bar 
 {
