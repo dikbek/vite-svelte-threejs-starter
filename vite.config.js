@@ -5,6 +5,7 @@ import glsl from "vite-plugin-glsl";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/vite-svelte-threejs-starter',
   plugins: [svelte(), glsl.default(), vitePluginString.default()],
   optimizeDeps: {
     exclude: ["svelte-navigator"],
