@@ -4,7 +4,8 @@
     import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
     import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
     import gsap from 'gsap'
-import { sineInOut, circInOut, cubicInOut, linear, quadInOut, quadOut, quartOut, quartInOut, quintInOut } from 'svelte/easing';
+
+    import { sineInOut, circInOut, cubicInOut, linear, quadInOut, quadOut, quartOut, quartInOut, quintInOut } from 'svelte/easing';
 
 let progressRatio
   

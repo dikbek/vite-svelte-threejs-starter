@@ -1,6 +1,6 @@
 <script>
 import '../global.css'
-import * as dat from 'dat.gui'
+import * as dat from  'lil-gui'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
@@ -90,19 +90,7 @@ const portalLightMaterial = new THREE.ShaderMaterial({
         uColorStart: { value: new THREE.Color(0x340e26)},
         uColorEnd: {value: new THREE.Color(0xffffff)}
     },
-    vertexShader: `
-    varying vec2 vUv;
-
-void main()
-{
-    vec4 modelPosition = modelMatrix * vec4(position, 1.0);
-    vec4 viewPosition = viewMatrix * modelPosition;
-    vec4 projectionPosition = projectionMatrix * viewPosition;
-
-    gl_Position = projectionPosition;
-
-    vUv = uv;
-}`,
+    vertexShader: portalVertexShader,
     fragmentShader: portalFragmentShader
 })
 
@@ -177,30 +165,8 @@ const firefliesMaterial = new THREE.ShaderMaterial({
         uPixelRatio: { value: Math.min(window.devicePixelRatio, 2)},
         uSize: { value: 100 }
     },
-    vertexShader: `uniform float uTime;
-uniform float uPixelRatio;
-uniform float uSize;
-
-attribute float aScale;
-
-void main()
-{
-    vec4 modelPosition = modelMatrix * vec4(position, 1.0);
-    modelPosition.y += sin(uTime + modelPosition.x * 100.0) * aScale * 0.2;
-
-    vec4 viewPosition = viewMatrix * modelPosition;
-    vec4 projectionPosition = projectionMatrix * viewPosition;
-
-    gl_Position = projectionPosition;
-    gl_PointSize = uSize * aScale * uPixelRatio;
-    gl_PointSize *= (1.0 / - viewPosition.z);
-}`,
-    fragmentShader: `void main()
-{
-    float distanceToCenter = distance(gl_PointCoord, vec2(0.5));
-    float strength = 0.05 / distanceToCenter - (0.05 * 2.);
-    gl_FragColor = vec4(1.0, 1.0, 1.0, strength);
-}`,
+    vertexShader: firefliesVertexShader,
+    fragmentShader: firefliesFragmentShader,
     transparent: true,
     blending: THREE.AdditiveBlending,
     depthWrite: false

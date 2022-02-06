@@ -23,6 +23,7 @@
     "check-node-version": "^4.1.0",
     "dat.gui": "^0.7.7",
     "gsap": "^3.8.0",
+    "lil-gui": "^0.13.0",
     "svelte-canvas": "^0.7.0",
     "three": "^0.133.0",
     "threex-domevents": "^1.0.0",
